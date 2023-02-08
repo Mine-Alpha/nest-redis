@@ -1,6 +1,6 @@
 {
   "name": "@Mine-Alpha/nest-redis",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Fabrizio La Rosa",
   "license": "MIT",
   "bugs": {
@@ -12,9 +12,6 @@
     "@nestjs/common": "^9.3.5",
     "ioredis": "^5.3.0",
     "redlock": "^5.0.0-beta.2"
-  },
-  "directories": {
-    "lib": "lib"
   },
   "devDependencies": {
     "@nestjs/common": "9.3.5",
@@ -50,9 +47,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mine-Alpha/Nest-Redis.git"
+    "url": "git+https://github.com/Mine-Alpha/nest-redis.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/Mine-Alpha"
+    "registry": "https://npm.pkg.github.com/Mine-Alpha",
+    "access": "public",
+    "directory": "dist"
   }
 }
