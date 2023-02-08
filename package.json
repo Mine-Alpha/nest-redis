@@ -1,0 +1,55 @@
+{
+  "name": "nest-redis",
+  "version": "0.1.0",
+  "author": "Fabrizio La Rosa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mine-Alpha/Nest-Redis/issues"
+  },
+  "homepage": "https://github.com/Mine-Alpha/Nest-Redis#readme",
+  "description": "",
+  "peerDependencies": {
+    "@nestjs/common": "^9.3.5",
+    "ioredis": "^5.3.0",
+    "redlock": "^5.0.0-beta.2"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {
+    "@nestjs/common": "9.3.5",
+    "@nestjs/core": "9.3.5",
+    "@nestjs/platform-express": "9.3.5",
+    "@nestjs/testing": "9.3.5",
+    "@types/jest": "29.4.0",
+    "@types/node": "18.13.0",
+    "@typescript-eslint/eslint-plugin": "5.51.0",
+    "@typescript-eslint/parser": "5.51.0",
+    "ioredis": "5.3.0",
+    "redlock": "5.0.0-beta.2",
+    "eslint": "8.33.0",
+    "eslint-config-prettier": "8.6.0",
+    "eslint-plugin-import": "2.27.5",
+    "jest": "29.4.2",
+    "lint-staged": "13.1.1",
+    "prettier": "2.8.3",
+    "rimraf": "4.1.2",
+    "ts-jest": "29.0.5",
+    "typescript": "4.9.5"
+  },
+  "scripts": {
+    "build": "rimraf -rf dist && tsc -p tsconfig.json",
+    "format": "prettier --write \"{lib,test}/**/*.ts\"",
+    "lint": "eslint 'lib/**/*.ts' --fix",
+    "prepublish:npm": "npm run build",
+    "publish:npm": "npm publish --access public",
+    "prepublish:next": "npm run build",
+    "publish:next": "npm publish --access public --tag next",
+    "test:e2e": "jest --config ./tests/jest-e2e.json --runInBand",
+    "prerelease": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mine-Alpha/Nest-Redis.git"
+  }
+}
